@@ -1,10 +1,10 @@
-# MSB1015-Assignment-2
+# MSB1015-Assignment-3
 
 [![GitHub License](https://img.shields.io/github/license/Rrtk2/MSB1015-Assignment-3)](https://github.com/Rrtk2/MSB1015-Assignment-3/blob/master/LICENSE.md) ![](https://img.shields.io/badge/Status-Setting_up-orange) [![GitHub Watches](https://img.shields.io/github/watchers/Rrtk2/MSB1015-Assignment-3.svg?style=social&label=Watch&maxAge=2592000)](https://github.com/Rrtk2/MSB1015-Assignment-3/watchers) 
 
 
 #### What is this project about
-This repository is the final product of assignment 3, requested by the course MSB1015 (Scientific Programming). The goal is to create a repository which contains all information, documentation and files needed to run a wikidata query using html/javascript as a new user.
+This repository is the final product of assignment 3, requested by the course MSB1015 (Scientific Programming).
 
 
 #### Usage
