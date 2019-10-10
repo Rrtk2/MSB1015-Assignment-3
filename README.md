@@ -2,6 +2,12 @@
 
 [![GitHub License](https://img.shields.io/github/license/Rrtk2/MSB1015-Assignment-3)](https://github.com/Rrtk2/MSB1015-Assignment-3/blob/master/LICENSE.md) ![](https://img.shields.io/badge/Status-Setting_up-orange) [![GitHub Watches](https://img.shields.io/github/watchers/Rrtk2/MSB1015-Assignment-3.svg?style=social&label=Watch&maxAge=2592000)](https://github.com/Rrtk2/MSB1015-Assignment-3/watchers) 
 
+#### Problem statement
+Big data requires a lot of computing. Computer clusters and video cards can perform
+many calculations in parallel. But that requires that your computing task actually
+allows data to be processed in parallel. In this assignment you will use Nextflow to
+calculate LogP values for molecules encoded as SMILES that you retrieved from
+Wikidata.
 
 #### What is this project about
 This repository is the final product of assignment 3, requested by the course MSB1015 (Scientific Programming).
