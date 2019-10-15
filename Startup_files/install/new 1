@@ -1,0 +1,7 @@
+https://docs.microsoft.com/en-us/windows/wsl/faq
+
+vhttps://docs.microsoft.com/en-us/windows/wsl/about
+
+in powershell as SU
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+
