@@ -41,10 +41,13 @@ cd /mnt/d/Github/MSB1015-Assignment-3/Startup_files
 
 /rick/nextflow run /mnt/d/Github/MSB1015-Assignment-3/Startup_files/simple.nf 
 
+/rick/nextflow run /mnt/d/Github/MSB1015-Assignment-3/Startup_files/checkSMILES.groovy
 
 
 
 
+# testing some tracing abilities
+nextflow run <pipeline name> -with-report [file name]
 
-
+/rick/nextflow run /mnt/d/Github/MSB1015-Assignment-3/Startup_files/simple2.nf -with-report testrun_large_8cpu.html
 
