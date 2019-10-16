@@ -45,5 +45,3 @@ process parseSMILES {
 
 
 }
-
-// mol.getatomcontainer -> 
