@@ -10,15 +10,16 @@ import org.openscience.cdk.qsar.descriptors.molecular.*;
 import org.openscience.cdk.qsar.result.*;
 
 Channel
-    .fromPath("./short.tsv")
+    .fromPath("./long.tsv")
     .splitCsv(header: ['wikidata', 'smiles'], sep:'\t')
     .map{ row -> tuple(row.wikidata, row.smiles) }
-	.buffer(size:5,remainder:true)
+	.buffer(size:40000,remainder:true) //TOTAL 160000 40000
     .set { molecules_ch }
 
 
 process parseSMILES {
-	label 'small'
+	cpus 4
+	maxForks 4
 	
     input:
     each set from molecules_ch
@@ -34,11 +35,13 @@ process parseSMILES {
 			
 			try {
 				mol = cdk.fromSMILES(smiles)
-				println(mol)
-				println ((DoubleResult)descriptor.calculate(mol.getAtomContainer()).value)
-				println ""
+				
+				Pval = ((DoubleResult)descriptor.calculate(mol.getAtomContainer()).value)
+				//println mol
+				//println Pval
+				//println ""
  			} catch (Exception exc) {
-				println "Error in " + wikidata + ": " + exc.message
+				//println "Error in " + wikidata + ": " + exc.message
 			}
 			  
 		}
