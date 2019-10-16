@@ -1,3 +1,8 @@
+// Run these lines first
+// 		cd /mnt/d/Github/MSB1015-Assignment-3/Startup_files
+//		/rick/nextflow run /mnt/d/Github/MSB1015-Assignment-3/Linux_files/runtime_test.nf 
+
+
 // Shebang for nextflow
 #!/usr/bin/env nextflow
 
