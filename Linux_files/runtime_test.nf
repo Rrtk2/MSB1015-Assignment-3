@@ -1,4 +1,7 @@
+// Shebang for nextflow
 #!/usr/bin/env nextflow
+
+
 // Import dependencies
 @Grab(group='io.github.egonw.bacting', module='managers-cdk', version='0.0.9')
 @Grab(group='org.openscience.cdk', module='cdk-qsarmolecular', version='2.3')
@@ -10,7 +13,8 @@ import org.openscience.cdk.tools.manipulator.*;
 import org.openscience.cdk.qsar.descriptors.molecular.*;
 import org.openscience.cdk.qsar.result.*;
 
-// Javadoc documentationfor machine readable code
+
+// Javadoc documentation for machine readable code
 /** Parses a SMILES string for a wikidata item into
 * a IatomContainer. Throws an exception when the SMILES is
 * invalid. This script is used to assesses the runtime
@@ -18,6 +22,7 @@ import org.openscience.cdk.qsar.result.*;
 * @param smiles the SMILES string that is to be parsed
 * 
 */
+
 
 // Define input. 'long.tsv' is obtained by WikiData query.
 Channel
@@ -27,7 +32,9 @@ Channel
 	.buffer(size:40000,remainder:true) //TOTAL 160000 40000
     .set { molecules_ch }
 
+
 // Create a process which takes the SMILES then parses and converts them into LogP values.
+// This process can be parallelized, thus, runtime can be saved.
 process parseSMILES {
 	// Define amount of cores
 	cpus 4
@@ -40,23 +47,20 @@ process parseSMILES {
 	cdk = new CDKManager(".");
 	descriptor = new XLogPDescriptor()	
 
-		for (item in set){
-			wikidata = item[0]
-			smiles = item[1]
+	for (item in set){
+		wikidata = item[0]
+		smiles = item[1]
+		
+		
+		try {
+			mol = cdk.fromSMILES(smiles)
 			
-			
-			try {
-				mol = cdk.fromSMILES(smiles)
-				
-				Pval = ((DoubleResult)descriptor.calculate(mol.getAtomContainer()).value)
-				//println mol
-				//println Pval
-				//println ""
- 			} catch (Exception exc) {
-				//println "Error in " + wikidata + ": " + exc.message
-			}
-			  
+			Pval = ((DoubleResult)descriptor.calculate(mol.getAtomContainer()).value)
+			//println mol
+			//println Pval
+			//println ""
+		} catch (Exception exc) {
+			//println "Error in " + wikidata + ": " + exc.message
 		}
-
-
+	}
 }
