@@ -33,6 +33,27 @@ INSTALL NEXTFLOW (https://www.nextflow.io/docs/latest/getstarted.html)
 
 wget -qO- https://get.nextflow.io | bash
 
+INSTALL UNZIP
+https://www.luminanetworks.com/docs-lsc-610/Topics/SDN_Controller_Software_Installation_Guide/Appendix/Installing_Zip_and_Unzip_for_Ubuntu_1.html
+
+sudo apt-get install zip
+
+
+
+
+
+INSTALL GROOVY
+http://groovy-lang.org/install.html
+
+
+curl -s get.sdkman.io | bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+sdk install groovy
+groovy -version
+
+
+
+
 
 USE NF
 cd /mnt/d/Github/MSB1015-Assignment-3/Startup_files
@@ -44,10 +65,24 @@ cd /mnt/d/Github/MSB1015-Assignment-3/Startup_files
 /rick/nextflow run /mnt/d/Github/MSB1015-Assignment-3/Startup_files/checkSMILES.groovy
 
 
+/rick/nextflow run /mnt/d/Github/MSB1015-Assignment-3/Startup_files/simple3.nf
+
+
 
 
 # testing some tracing abilities
 nextflow run <pipeline name> -with-report [file name]
 
-/rick/nextflow run /mnt/d/Github/MSB1015-Assignment-3/Startup_files/simple2.nf -with-report testrun_large_8cpu.html
+/rick/nextflow run /mnt/d/Github/MSB1015-Assignment-3/Startup_files/simple3.nf -with-report testrun_1.html
+
+/rick/nextflow run /mnt/d/Github/MSB1015-Assignment-3/Startup_files/checkSMILES.groovy -with-report testrun_2.html
+
+
+
+
+
+
+
+
+
 
