@@ -1,0 +1,50 @@
+---
+title: "Installation"
+---
+
+### Windows
+```{}
+
+https://docs.microsoft.com/en-us/windows/wsl/faq
+
+https://docs.microsoft.com/en-us/windows/wsl/about
+https://docs.microsoft.com/en-us/windows/wsl/install-win10
+
+
+in powershell as SU
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+
+then (https://docs.microsoft.com/en-us/windows/wsl/install-manual)
+
+Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseBasicParsin
+
+then
+
+Add-AppxPackage .\Ubuntu.appx
+
+then (https://docs.microsoft.com/en-us/windows/wsl/initialize-distro)
+
+<<On Windows Server, you can launch your distro's launcher executable <distro>.exe from the distro installation folder.
+
+ubuntu.exe!
+
+
+INSTALL JAVA https://stackoverflow.com/questions/36478741/installing-oracle-jdk-on-windows-subsystem-for-linux)
+sudo apt-get update
+sudo apt-get install default-jdk
+
+
+INSTALL NEXTFLOW (https://www.nextflow.io/docs/latest/getstarted.html)
+
+#/mnt/d/Github/MSB1015-Assignment-3/ 
+
+wget -qO- https://get.nextflow.io | bash
+
+
+```
+
+
+### Linux
+```{}
+
+```
