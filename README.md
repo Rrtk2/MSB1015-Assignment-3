@@ -14,16 +14,16 @@ This repository is the final product of assignment 3, requested by the course MS
 
 
 #### Installation
-This script is ran in [Nextflow](https://www.nextflow.io/), which is linux based. Many different methods can be used to run Linux in windows, such as a virutal machine. However, in this example the [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/faq) is used. During installation restarting might be reuired, please do so and follow the instructions given in the interface. To install WSL, java and nextflow on windows please follow these steps:
+This script is ran in [Nextflow](https://www.nextflow.io/), which is Linux based. Many different methods can be used to run Linux in Windows, such as a virutal machine. However, in this example the [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/Windows/wsl/faq) is used. During installation restarting might be required, please do so and follow the instructions given in the interface. To install WSL, Java and Nextflow on Windows please follow these steps:
 
-###### Ubuntu linux
-1) Open windows powershell as administator
-2) Run this line in powershell: `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`
-3) Run this line in powershell: `Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseBasicParsin`
-4) Run this line in powershell: `Add-AppxPackage .\Ubuntu.appx`
-5) When searching for "Ubuntu" in the search bar, an .exe file should be prompted. This program can be run to start linux.
+###### Ubuntu Linux
+1) Open Windows PowerShell as administator
+2) Run this line in PowerShell: `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`
+3) Run this line in PowerShell: `Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseBasicParsin`
+4) Run this line in PowerShell: `Add-AppxPackage .\Ubuntu.appx`
+5) When searching for "Ubuntu" in the search bar, an .exe file should be prompted. This program can be run to start Linux.
 
-###### java
+###### Java
 6) Optional: Start Ubuntu Linux (step 5)
 7) Run this line in terminal: `sudo apt-get update`
 8) Run this line in terminal: `sudo apt-get install default-jdk`
@@ -33,8 +33,8 @@ This script is ran in [Nextflow](https://www.nextflow.io/), which is linux based
 10) Run this line in terminal: `wget -qO- https://get.nextflow.io | bash`
 
 #### Usage
-When linux, java and nextflow can be used, download the [Linux files](/Linux_files/). 
-Open terminal in linux, set the Linux files path to the active working directory using `cd /path`. For example `cd /mnt/d/Github/MSB1015-Assignment-3/Linux_files/`.
+When Linux, Java and nextflow can be used, download the [Linux files](/Linux_files/). 
+Open terminal in Linux, set the Linux files path to the active working directory using `cd /path`. For example `cd /mnt/d/Github/MSB1015-Assignment-3/Linux_files/`.
 
 Afterward, run the following lines. These will assess the running time of using 1, 2 and 4 cpus.
 
