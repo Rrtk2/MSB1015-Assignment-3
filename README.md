@@ -24,13 +24,16 @@ Open terminal in linux, and enter the following lines of code:
 
 then
 
-`/rick/nextflow run /mnt/d/Github/MSB1015-Assignment-3/Linux_files/runtime_test.nf`
+`time /rick/nextflow run /mnt/d/Github/MSB1015-Assignment-3/Linux_files/runtime_test_1cpu.nf`
 
 This will run the script and automatically indicate the time.
 
 
-#### Expected output
-When following the *usage* instructions, the expected output will be a runtime with specific settings.  
+#### Results / expected output
+When following the *usage* instructions, the expected output will be a summed runtime of 'user' and 'sys'. The following results were obtained:
+- 1cpu: 197.672s
+- 2cpu: 192.406s
+- 4cpu: 208.829s
 
 #### Project structure
 The query asks information from [Wikidata](http://wikidata.org) in a similar fashion the dedicated [Wikidata database query](https://query.wikidata.org/) works using the SPARQL language. Data on wikidata is published under the [Creative Commons Zero](https://creativecommons.org/share-your-work/public-domain/cc0) license, stating 'others may freely build upon, enhance and reuse the works for any purposes without restriction under copyright or database law'.
