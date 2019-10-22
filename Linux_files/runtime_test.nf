@@ -1,10 +1,8 @@
+#!/usr/bin/env nextflow
+
 // Run these lines first
 // 		cd /mnt/d/Github/MSB1015-Assignment-3/Startup_files
 //		/rick/nextflow run /mnt/d/Github/MSB1015-Assignment-3/Linux_files/runtime_test.nf 
-
-
-// Shebang for nextflow
-#!/usr/bin/env nextflow
 
 
 // Import dependencies
@@ -43,7 +41,6 @@ Channel
 process parseSMILES {
 	// Define amount of cores
 	cpus 4
-	maxForks 4
 	
     input:
     each set from molecules_ch
