@@ -1,0 +1,6 @@
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+SELECT DISTINCT ?compound ?smiles ?isoSmiles WHERE {
+  ?compound wdt:P233 | wdt:P2017 [] .
+  OPTIONAL { ?compound wdt:P233 ?smiles }
+  OPTIONAL { ?compound wdt:P2017 ?isoSmiles }
+}
