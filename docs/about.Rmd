@@ -1,6 +1,0 @@
----
-title: "About This Website"
----
-
-This GitHub page is the final product of assignment 3, requested by the course MSB1015 (Scientific Programming). 
-See the [GitHub repository](https://github.com/Rrtk2/MSB1015-Assignment-3) for more details.
