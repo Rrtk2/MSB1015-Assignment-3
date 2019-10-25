@@ -1,6 +1,6 @@
 # MSB1015-Assignment-3
 
-[![GitHub License](https://img.shields.io/github/license/Rrtk2/MSB1015-Assignment-3)](https://github.com/Rrtk2/MSB1015-Assignment-3/blob/master/LICENSE.md) ![](https://img.shields.io/badge/Status-In_progress-green) [![GitHub Watches](https://img.shields.io/github/watchers/Rrtk2/MSB1015-Assignment-3.svg?style=social&label=Watch&maxAge=2592000)](https://github.com/Rrtk2/MSB1015-Assignment-3/watchers) 
+[![GitHub License](https://img.shields.io/github/license/Rrtk2/MSB1015-Assignment-3)](https://github.com/Rrtk2/MSB1015-Assignment-3/blob/master/LICENSE.md) ![](https://img.shields.io/badge/Status-Wrapping_up-green) [![GitHub Watches](https://img.shields.io/github/watchers/Rrtk2/MSB1015-Assignment-3.svg?style=social&label=Watch&maxAge=2592000)](https://github.com/Rrtk2/MSB1015-Assignment-3/watchers) 
 
 #### Problem statement
 Big data requires a lot of computing. Computer clusters and video cards can perform
@@ -30,7 +30,9 @@ This script is ran in [Nextflow](https://www.nextflow.io/), which is Linux based
 
 ###### Nextflow
 9) Optional: Start Ubuntu Linux (step 5)
-10) Run this line in terminal: `wget -qO- https://get.nextflow.io | bash`
+10) Create folder 'NxtFl' in /home/ folder by running this line in terminal `mkdir /home/NxtFl`
+11) go to folder by running this line in terminal `cd /home/NxtFl`
+12) Run this line in terminal: `wget -qO- https://get.nextflow.io | bash`
 
 #### Usage
 When Linux, Java and nextflow can be used, download the [Linux files](/Linux_files/). 
@@ -38,11 +40,11 @@ Open terminal in Linux, set the Linux files path to the active working directory
 
 Afterward, run the following lines. These will assess the running time of using 1, 2 and 4 cpus.
 
-`time /rick/nextflow run /runtime_test_1cpu.nf`
+`time /home/NxtFl/nextflow run ./runtime_test_1cpu.nf`
 
-`time /rick/nextflow run /runtime_test_2cpu.nf`
+`time /home/NxtFl/nextflow run ./runtime_test_2cpu.nf`
 
-`time /rick/nextflow run /runtime_test_4cpu.nf`
+`time /home/NxtFl/nextflow run ./runtime_test_4cpu.nf`
 
 
 This will run the script and automatically indicate the time after every time command.
@@ -89,7 +91,7 @@ RRtK2 (owner and contributor)
 
 
 #### Status of project
-In progress. Essentials are set up, big commits are likely.
+Wrapping up. Bugfixes, small changes.
 
 
 #### Copyright and authors
