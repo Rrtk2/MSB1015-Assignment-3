@@ -12,6 +12,25 @@ Wikidata.
 #### What is this project about
 This repository is the final product of assignment 3, requested by the course MSB1015 (Scientific Programming). 
 
+#### Project structure
+The query asks information from [Wikidata](http://wikidata.org) in a similar fashion the dedicated [Wikidata database query](https://query.wikidata.org/) works using the SPARQL language. Data on wikidata is published under the [Creative Commons Zero](https://creativecommons.org/share-your-work/public-domain/cc0) license, stating 'others may freely build upon, enhance and reuse the works for any purposes without restriction under copyright or database law'.
+This information is processed in [Nextflow](https://www.nextflow.io/) (released under under the [Apache 2.0 license](https://www.apache.org/licenses/LICENSE-2.0) licence, see the [paper](https://www.nature.com/articles/nbt.3820)). Data is parsed using the [the Chemistry Development Kit](https://cdk.github.io/index.html) (released under the [GNU Lesser General Public License](https://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html))
+
+##### How is data shared, in what format, with what protocols?
+Using the tool developed in this project, data is shared using the [wikidata-sdk](https://www.wikidata.org/w/api.php). 
+
+##### Workflow
+The following workflow is applied:
+
+1) Data extraction from WikiData.
+
+2) Data parsing using [the Chemistry Development Kit](https://cdk.github.io/index.html) in Nextflow.
+
+3) Extract logP value for every SMILES (around 150,000).
+
+4) Re-run the steps 1, 2 and 3 with 1, 2 and 4 cores.
+
+5) Compare running times.
 
 #### Installation
 This script is ran in [Nextflow](https://www.nextflow.io/), which is Linux based. Many different methods can be used to run Linux in Windows, such as a virutal machine. However, in this example the [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/Windows/wsl/faq) is used. During installation restarting might be required, please do so and follow the instructions given in the interface. To install WSL, Java and Nextflow on Windows please follow these steps 1 to 12. If these are installed then start at 13.
@@ -59,26 +78,6 @@ The following results were obtained:
 - 1cpu: 197.672s
 - 2cpu: 192.406s
 - 4cpu: 208.829s
-
-#### Project structure
-The query asks information from [Wikidata](http://wikidata.org) in a similar fashion the dedicated [Wikidata database query](https://query.wikidata.org/) works using the SPARQL language. Data on wikidata is published under the [Creative Commons Zero](https://creativecommons.org/share-your-work/public-domain/cc0) license, stating 'others may freely build upon, enhance and reuse the works for any purposes without restriction under copyright or database law'.
-
-##### How is data shared, in what format, with what protocols?
-Using the tool developed in this project, data is shared using the [wikidata-sdk](https://www.wikidata.org/w/api.php). 
-
-##### Workflow
-The following workflow is applied:
-
-1) Data extraction from WikiData.
-
-2) Data parsing using [the Chemistry Development Kit](https://cdk.github.io/cdk/) in Nextflow.
-
-3) Extract logP value for every SMILES (around 150,000).
-
-4) Re-run the steps 1, 2 and 3 with 1, 2 and 4 cores.
-
-5) Compare running times.
-
 
 #### Contact
 ra.reijnders@student.maastrichtuniversity.nl
