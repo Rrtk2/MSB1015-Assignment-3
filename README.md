@@ -14,14 +14,14 @@ This repository is the final product of assignment 3, requested by the course MS
 
 
 #### Installation
-This script is ran in [Nextflow](https://www.nextflow.io/), which is Linux based. Many different methods can be used to run Linux in Windows, such as a virutal machine. However, in this example the [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/Windows/wsl/faq) is used. During installation restarting might be required, please do so and follow the instructions given in the interface. To install WSL, Java and Nextflow on Windows please follow these steps:
+This script is ran in [Nextflow](https://www.nextflow.io/), which is Linux based. Many different methods can be used to run Linux in Windows, such as a virutal machine. However, in this example the [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/Windows/wsl/faq) is used. During installation restarting might be required, please do so and follow the instructions given in the interface. To install WSL, Java and Nextflow on Windows please follow these steps 1 to 12. If these are installed then start at 13.
 
 ###### Ubuntu Linux
 1) Open Windows PowerShell as administator
 2) Run this line in PowerShell: `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`
-3) Run this line in PowerShell: `Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseBasicParsin`
+3) Run this line in PowerShell: `Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1804 -OutFile Ubuntu.appx -UseBasicParsin`
 4) Run this line in PowerShell: `Add-AppxPackage .\Ubuntu.appx`
-5) When searching for "Ubuntu" in the search bar, an .exe file should be prompted. This program can be run to start Linux.
+5) When searching for "Ubuntu" in the search bar, an .exe file should be prompted. This program can be run to start Linux, on first run the OS will be installed.
 
 ###### Java
 6) Optional: Start Ubuntu Linux (step 5)
@@ -34,24 +34,28 @@ This script is ran in [Nextflow](https://www.nextflow.io/), which is Linux based
 11) go to folder by running this line in terminal `cd /home/NxtFl`
 12) Run this line in terminal: `wget -qO- https://get.nextflow.io | bash`
 
+###### Clone GitHub repository
+13) Create a directory for the GitHub repository by running this line in terminal: `mkdir /home/GitRepo`
+14) Clone the GitHub repository into the created folder by running this line in terminal: `git clone https://github.com/Rrtk2/MSB1015-Assignment-3 /home/GitRepo` 
+
 #### Usage
-When Linux, Java and nextflow can be used, download the [Linux files](/Linux_files/). 
-Open terminal in Linux, set the Linux files path to the active working directory using `cd /path`. For example `cd /mnt/d/Github/MSB1015-Assignment-3/Linux_files/`.
+When the installation is completed, Nextflow and the GitHub repository will be in an specific location. If deviated from this, change the code below accordingly.
 
-Afterward, run the following lines. These will assess the running time of using 1, 2 and 4 cpus.
+If no changes are required, run the following lines. These will assess the running time of using 1, 2 and 4 cpus.
 
-`time /home/NxtFl/nextflow run ./runtime_test_1cpu.nf`
+`time /home/NxtFl/nextflow run /home/GitRepo/Linux_files/runtime_test_1cpu.nf`
 
-`time /home/NxtFl/nextflow run ./runtime_test_2cpu.nf`
+`time /home/NxtFl/nextflow run /home/GitRepo/Linux_files/runtime_test_2cpu.nf`
 
-`time /home/NxtFl/nextflow run ./runtime_test_4cpu.nf`
-
+`time /home/NxtFl/nextflow run /home/GitRepo/Linux_files/runtime_test_4cpu.nf`
 
 This will run the script and automatically indicate the time after every time command.
 
 
 #### Results / expected output
-When following the *usage* instructions, the expected output will be a summed runtime of 'user' and 'sys', representing the CPU runtime. The following results were obtained:
+When following the *usage* instructions, the expected output will be a summed runtime of 'user' and 'sys', representing the CPU runtime. 
+
+The following results were obtained:
 - 1cpu: 197.672s
 - 2cpu: 192.406s
 - 4cpu: 208.829s
