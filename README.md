@@ -41,7 +41,7 @@ This script is ran in [Nextflow](https://www.nextflow.io/), which is Linux based
 #### Usage
 When the installation is completed, Nextflow and the GitHub repository will be in an specific location. If deviated from this, change the code below accordingly.
 
-If no changes are required, run the following lines. These will assess the running time of using 1, 2 and 4 cpus.
+If no changes are required, run the following lines. These will assess the running time of using 1, 2 and 4 cpus. These scripts will use the supplied [long.tsv](https://github.com/Rrtk2/MSB1015-Assignment-3/blob/master/Linux_files/long.tsv), which is a tsv file of the result of a [query call](https://query.wikidata.org/) using this specific [call](https://github.com/Rrtk2/MSB1015-Assignment-3/blob/master/Linux_files/getSMILES.rq).
 
 `time /home/NxtFl/nextflow run /home/GitRepo/Linux_files/runtime_test_1cpu.nf`
 
@@ -53,7 +53,7 @@ This will run the script and automatically indicate the time after every time co
 
 
 #### Results / expected output
-When following the *usage* instructions, the expected output will be a summed runtime of 'user' and 'sys', representing the CPU runtime. 
+When following the *usage* instructions, the expected output will be a summed runtime of 'user' and 'sys', representing the CPU runtime. The script will not prompt the logP values as printing to the terminal takes more time than the actual operation of extracting the logP value (which is perfomed in parallel). If this is required, these lines can be uncommented in the actual scripts. 
 
 The following results were obtained:
 - 1cpu: 197.672s
