@@ -35,7 +35,8 @@ The following workflow is applied:
 #### Installation
 This script is ran in [Nextflow](https://www.nextflow.io/), which is Linux based. Many different methods can be used to run Linux in Windows, such as a virtual machine. However, in this example the [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/Windows/wsl/faq) is used. During installation restarting might be required, please do so and follow the instructions given in the interface. To install WSL, Java and Nextflow on Windows please follow these steps 1 to 12. If these are installed then start at 13.
 
-###### Ubuntu Linux
+###### Ubuntu Linux (windows 10 only)
+**Before Running the following steps, make sure the "Windows subsystem for Linux" is enabled under "Windows Features". Windows Features can be found by searching windows features in the windows search bar.**
 1) Open Windows PowerShell as administrator
 2) Run this line in PowerShell: `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`
 3) Run this line in PowerShell: `Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1804 -OutFile Ubuntu.appx -UseBasicParsin`
